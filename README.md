@@ -1,4 +1,4 @@
-# Trade Go-zilla
+# The SMSatron 3000
 
 ## Getting Started
 
@@ -22,9 +22,9 @@ Patches and pull requests are gladly accepted. Please make sure that you include
 
 ## License
 
-Tradegozilla is released under the MIT license.
+SMSatron is released under the MIT license.
 
-Copyright (c) 2015 Glenn Gillen
+Copyright (c) 2015 Glu IO Pty. Ltd, Glenn Gillen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
