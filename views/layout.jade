@@ -8,7 +8,10 @@ html
     script(src="/scripts/jquery.dd.min.js")
     script(type='text/javascript').
       $(document).ready(function() {
-        $("#countries").msDropdown()
+        $.get("http://ipinfo.io", function(response) {
+          $("#countries option[data-imagecss='flag " + response.country.toLowerCase() + "']").prop('selected', true)
+          $("#countries").msDropdown()
+        }, "jsonp");
       })
   body
     each message in flash
