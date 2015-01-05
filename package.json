@@ -1,0 +1,35 @@
+{
+  "name": "smsatron",
+  "version": "1.0.0",
+  "description": "SMS anybody using Blower.io",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gluio/smsatron-nodejs.git"
+  },
+  "keywords": [
+    "sms",
+    "blower.io"
+  ],
+  "author": "Glenn Gillen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluio/smsatron-nodejs/issues"
+  },
+  "homepage": "https://github.com/gluio/smsatron-nodejs",
+  "dependencies": {
+    "body-parser": "^1.10.1",
+    "express": "^4.10.6",
+    "express-partials": "^0.3.0",
+    "express-session": "^1.9.3",
+    "flash": "^1.1.0",
+    "jade": "^1.8.2",
+    "request": "^2.51.0"
+  }
+}

@@ -1,0 +1,17 @@
+html
+  head
+    title SMSatron
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/msdropdown/dd.css')
+    link(rel='stylesheet', href='/stylesheets/msdropdown/flags.css')
+    script(src="/scripts/jquery-2.1.3.min.js")
+    script(src="/scripts/jquery.dd.min.js")
+    script(type='text/javascript').
+      $(document).ready(function() {
+        $("#countries").msDropdown()
+      })
+  body
+    each message in flash
+      p.alert(class=message.type)= message.message
+    h1 The SMSatron 3001
+    != body
