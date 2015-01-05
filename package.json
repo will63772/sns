@@ -30,6 +30,11 @@
     "express-session": "^1.9.3",
     "flash": "^1.1.0",
     "jade": "^1.8.2",
+    "node-bourbon": "^1.2.3",
+    "node-neat": "^1.4.2",
+    "node-refills": "^1.0.1",
+    "node-sass": "^2.0.0-beta",
+    "node-sass-middleware": "^0.4.0",
     "request": "^2.51.0"
   }
 }

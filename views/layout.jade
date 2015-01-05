@@ -14,7 +14,9 @@ html
         }, "jsonp");
       })
   body
-    each message in flash
-      p.alert(class=message.type)= message.message
-    h1 The SMSatron 3001
-    != body
+    #container
+      != partial('nav')
+      each message in flash
+        p.alert(class=message.type)= message.message
+      != body
+      != partial('footer')

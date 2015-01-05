@@ -2,12 +2,23 @@ var express = require('express'),
     session = require('express-session'),
     bodyParser = require("body-parser"),
     partials = require('express-partials'),
+    sassMiddleware = require('node-sass-middleware'),
+    refills = require('node-refills'),
     app = express()
 
 app.use(session({secret: 'keyboard cat', resave: false, saveUninitialized: true}))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(require('flash')())
 app.use(partials())
+app.use(
+  sassMiddleware({
+    src: __dirname + '/sass',
+    dest: __dirname + '/public',
+    outputStyle: true,
+    debug: true,
+    includePaths: refills.includePaths
+  })
+)
 app.use(express.static(__dirname + '/public'))
 app.set('views', './views')
 app.set('view engine', 'jade')

@@ -1,0 +1,35 @@
+@import "bourbon/bourbon";
+@import "base/base";
+@import "base/grid-settings";
+@import "neat/neat-helpers";
+@import "neat/neat";
+
+$base-background-color: #ffcf00;
+$max-width: 95%;
+
+@import "refills/browser";
+@import "refills/icon-bullet-points";
+@import "refills/comment";
+@import "refills/device";
+@import "refills/type-system-geometric";
+@import "refills/hover-tile-animation";
+
+@import "refills/breadcrumbs";
+//@import "flashes";
+@import "refills/footer";
+@import "refills/hero";
+@import "refills/navigation";
+
+body {
+  background: $base-background-color;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  @include outer-container;
+}
+
+.device .screen {
+  background-image: url(/images/mittens-messages.jpg);
+}
