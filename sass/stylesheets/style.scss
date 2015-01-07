@@ -18,7 +18,7 @@ $max-width: 100%;
 @import "refills/breadcrumbs";
 @import "refills/footer";
 @import "refills/hero";
-@import "refills/navigation";
+@import "navigation";
 
 body {
   background: $base-background-color;
@@ -88,10 +88,6 @@ textarea {
 
 header.navigation a.sign-up {
   margin: 1.2em 0
-}
-
-#js-navigation-menu {
-  display: none;
 }
 
 @media screen and (max-width: $large-screen) {
