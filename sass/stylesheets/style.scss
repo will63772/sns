@@ -5,7 +5,7 @@
 @import "neat/neat";
 
 $base-background-color: #ffcf00;
-$max-width: 95%;
+$max-width: 100%;
 
 @import "refills/browser";
 @import "refills/icon-bullet-points";
@@ -32,4 +32,40 @@ body {
 
 .device .screen {
   background-image: url(/images/mittens-messages.jpg);
+}
+
+span#countries_title.ddTitleText {
+  text-align: right;
+  padding-right: 35px;
+}
+select, div#countries_msdd.dd.ddcommon {
+  float: left;
+}
+div.ddTitle.borderRadiusTp, div#countries_msdd.dd.ddcommon.borderRadius {
+  border-radius: 5px 0 0 5px;
+}
+input[name='number'] {
+  width: 15em;
+  border-radius: 0 5px 5px 0;
+}
+textarea {
+  width: 30em;
+}
+
+.device-background {
+  height: 28em;
+  padding-top: 5em;
+  background: none;
+}
+.device-text {
+  padding: 0;
+  margin: 2em 4em 4em;
+}
+.device {
+  float: none;
+  margin-left: 40em;
+}
+.content {
+  margin: auto;
+  max-width: 30em;
 }
