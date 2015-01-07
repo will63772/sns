@@ -1,5 +1,6 @@
 var express = require('express'),
     session = require('express-session'),
+    flash = require('flash'),
     bodyParser = require("body-parser"),
     partials = require('express-partials'),
     sassMiddleware = require('node-sass-middleware'),
@@ -7,8 +8,8 @@ var express = require('express'),
     app = express()
 
 app.use(session({secret: 'keyboard cat', resave: false, saveUninitialized: true}))
+app.use(flash())
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(require('flash')())
 app.use(partials())
 app.use(
   sassMiddleware({
@@ -42,8 +43,9 @@ app.post('/send', function (req, res) {
       message: message
     }
   }, function(error, response, body){
-    if (!error && response.statusCode == 200)  {
-      req.flash('info', 'Message sent!')
+    if (!error && response.statusCode == 201)  {
+      console.log(response.statusCode)
+      req.flash('success', 'Message sent!')
     } else {
       var apiResult = JSON.parse(body)
       req.flash('error', apiResult.message)

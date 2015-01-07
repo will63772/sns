@@ -4,6 +4,7 @@
 @import "neat/neat-helpers";
 @import "neat/neat";
 
+$large-screen: 870px;
 $base-background-color: #ffcf00;
 $max-width: 100%;
 
@@ -15,7 +16,7 @@ $max-width: 100%;
 @import "refills/hover-tile-animation";
 
 @import "refills/breadcrumbs";
-//@import "flashes";
+@import "flashes";
 @import "refills/footer";
 @import "refills/hero";
 @import "refills/navigation";
@@ -34,22 +35,39 @@ body {
   background-image: url(/images/mittens-messages.jpg);
 }
 
+.flash-alert {
+  @include flash($alert-color);
+}
+
+.flash-error {
+  @include flash($error-color);
+}
+
+.flash-notice {
+  @include flash($notice-color);
+}
+
+.flash-success {
+  @include flash($success-color);
+}
+
 span#countries_title.ddTitleText {
   text-align: right;
   padding-right: 35px;
 }
-select, div#countries_msdd.dd.ddcommon {
+select, div#countries_msdd.dd.ddcommon.borderRadius {
   float: left;
+  width: 50%;
 }
 div.ddTitle.borderRadiusTp, div#countries_msdd.dd.ddcommon.borderRadius {
   border-radius: 5px 0 0 5px;
 }
 input[name='number'] {
-  width: 15em;
+  width: 50%;
   border-radius: 0 5px 5px 0;
 }
 textarea {
-  width: 30em;
+  width: 100%;
 }
 
 .device-background {
@@ -59,13 +77,22 @@ textarea {
 }
 .device-text {
   padding: 0;
-  margin: 2em 4em 4em;
+  margin: 2em 0 4em 4em;
 }
 .device {
-  float: none;
-  margin-left: 40em;
+  margin-right: 8em;
 }
-.content {
-  margin: auto;
-  max-width: 30em;
+
+header.navigation a.sign-up {
+  margin: 1.2em 0
+}
+
+#js-navigation-menu {
+  display: none;
+}
+
+@media screen and (max-width: $large-screen) {
+  .device-text {
+    margin-right: 4em;
+  }
 }

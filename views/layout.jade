@@ -8,15 +8,19 @@ html
     script(src="/scripts/jquery.dd.min.js")
     script(type='text/javascript').
       $(document).ready(function() {
+        $('#js-navigation-menu').removeClass("show");
+        $('#js-mobile-menu').on('click', function(e) {
+          e.preventDefault();
+          $('#js-navigation-menu').slideToggle();
+        });
         $.get("http://ipinfo.io", function(response) {
           $("#countries option[data-imagecss='flag " + response.country.toLowerCase() + "']").prop('selected', true)
           $("#countries").msDropdown()
+          $("#countries_msdd").width("48%")
         }, "jsonp");
       })
   body
     #container
       != partial('nav')
-      each message in flash
-        p.alert(class=message.type)= message.message
       != body
       != partial('footer')
