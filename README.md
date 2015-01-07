@@ -2,17 +2,30 @@
 
 ## Getting Started
 
+To deploy this app you'll need to first sign up for a [Heroku account](https://signup.heroku.com).
+
 ### Installation
+
+Once you've got your Heroku account created, deploying this app is as simple as clicking this button:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ### Usage
 
-## Further Reading
+Once you've deployed, visit the URL Heroku has provided and you'll see a page that allows you to send an SMS
+message. Messages are sent via the [Blower.io](https://addons.heroku.com/blowerio) add-on, to log in to Blower.io
+and see API usage click the relevant link in the [Heroku Dashboard](https://dashboard.heroku.com/) for you app, or
+run `heroku addons:open blowerio` via the CLI.
+
+Documentation for Blower.io usage is in the [Dev Center](https://devcenter.heroku.com/blowerio)
 
 ## Compatibility
 
+Tested and working with Node.js 0.10.x.
+
 ## Status
 
-In active development and heavy refactoring, it's unstable and shouldn't be relied upon in production.
+Production ready. Any problems please [create an issue](issues).
 
 ## Contributing
 
