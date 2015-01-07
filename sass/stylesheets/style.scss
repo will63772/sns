@@ -1,8 +1,8 @@
-@import "bourbon/bourbon";
+@import "bourbon";
 @import "base/base";
 @import "base/grid-settings";
 @import "neat/neat-helpers";
-@import "neat/neat";
+@import "neat";
 
 $large-screen: 870px;
 $base-background-color: #ffcf00;
@@ -16,7 +16,6 @@ $max-width: 100%;
 @import "refills/hover-tile-animation";
 
 @import "refills/breadcrumbs";
-@import "flashes";
 @import "refills/footer";
 @import "refills/hero";
 @import "refills/navigation";
@@ -25,6 +24,10 @@ body {
   background: $base-background-color;
   margin: 0;
   padding: 0;
+}
+
+.logo img {
+  @include filter(grayscale(100%));
 }
 
 #container {
