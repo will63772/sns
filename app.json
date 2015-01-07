@@ -4,4 +4,5 @@
   "repository": "https://github.com/gluio/smsatron-nodejs",
   "logo": "http://blower.io/images/blowerio-icon-flat-color-small.png",
   "keywords": ["node", "express", "static", "sms", "blower", "blowerio", "jumpstartup", "glu", "gluio"]
+  "addons": ["blowerio"]
 }
