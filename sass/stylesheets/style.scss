@@ -5,7 +5,7 @@
 @import "neat";
 
 $large-screen: 965px;
-$base-background-color: #ffcf00;
+$base-background-color: #ffb300;
 $max-width: 100%;
 
 @import "refills/browser";
@@ -76,7 +76,15 @@ textarea {
 .device-background {
   height: 28em;
   padding-top: 5em;
-  background: none;
+  background-image: none;
+  background-color: $base-background-color;
+  background-size: auto,auto,100% 1000px,100% 1000px;
+  @include background-image(
+    radial-gradient(0% bottom,rgba(lighten(adjust-hue($base-background-color, 15%), 15%),.7) 0, rgba(lighten(adjust-hue($base-background-color, 15%), 15%),0) 60%),
+    radial-gradient(90% bottom,rgba(darken($base-background-color, 25%),0) 0,rgba(lighten(adjust-hue($base-background-color, 25%), 10%), 0) 40%),
+    radial-gradient(50% top,rgba(lighten(adjust-hue($base-background-color, -25%), 20%),.6) 0,rgba(lighten(adjust-hue($base-background-color, -25%), 20%),0) 75%),
+    radial-gradient(right top,lighten($base-background-color, 30%) 0, rgba(lighten($base-background-color, 30%), 0) 57%)
+  );
 }
 .device-text {
   padding: 0;
