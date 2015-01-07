@@ -4,7 +4,7 @@
 @import "neat/neat-helpers";
 @import "neat";
 
-$large-screen: 870px;
+$large-screen: 965px;
 $base-background-color: #ffcf00;
 $max-width: 100%;
 
@@ -83,11 +83,13 @@ textarea {
   margin: 2em 0 4em 4em;
 }
 .device {
-  margin-right: 8em;
+  margin-right: 12em;
 }
 
-header.navigation a.sign-up {
-  margin: 1.2em 0
+header.navigation .navigation-tools a {
+  display: block;
+  margin: 0.9em 0;
+  float: right;
 }
 
 @media screen and (max-width: $large-screen) {
